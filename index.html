@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coastal Elite Fishing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: black; /* Black background */
-            color: white; /* White text */
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: #1B263B;
-            padding: 15px;
+            background-color: #121212;
+            color: #ffffff;
             text-align: center;
         }
 
-        nav a {
-            color: #E9C46A;
-            margin: 0 20px;
-            font-size: 1.2rem;
+        a {
             text-decoration: none;
-            font-weight: bold;
+            color: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #1F1F1F;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #F4A261;
+            margin: 0 15px;
+            font-weight: 500;
+            font-size: 1.1rem;
         }
 
         nav a:hover {
-            color: #F4A261;
+            color: #E76F51;
         }
 
         /* Hero Section */
@@ -41,14 +49,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
         }
 
         .hero h1 {
-            font-size: 3.5rem;
+            font-size: 4rem;
             margin: 0;
             color: #F4A261;
-            font-weight: bold;
+            font-weight: 700;
         }
 
         .hero p {
@@ -68,7 +77,6 @@
             border-radius: 5px;
             cursor: pointer;
             transition: 0.3s;
-            text-decoration: none;
             font-weight: bold;
             box-shadow: 0 0 10px rgba(231, 111, 81, 0.7);
         }
@@ -106,64 +114,86 @@
             color: #F4A261;
         }
 
+        /* Products Section */
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 60px 20px;
+        }
+
+        .product-card {
+            background: #1F1F1F;
+            color: white;
+            width: 250px;
+            margin: 15px;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card h3 {
+            color: #F4A261;
+        }
+
         /* Footer */
         .footer {
             background: #1B263B;
             padding: 20px;
-            margin-top: 30px;
             font-size: 1rem;
-            text-align: center;
+            color: #ffffff;
         }
 
-        .footer a {
-            color: #E9C46A;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: #F4A261;
-        }
     </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- Navigation -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
-        <a href="shop.html">Shop</a>
         <a href="contact.html">Contact Us</a>
+        <a href="warranty.html">Warranty & Returns</a>
+        <a href="quiz.html">Try Our Custom Rod Quiz</a>
     </nav>
 
     <!-- Hero Section -->
     <div class="hero">
         <h1>Coastal Elite Fishing</h1>
         <p>Handcrafted rods built for serious anglers who demand the best.</p>
-        <a href="shop.html" class="btn">Shop Now</a>
+        <a href="https://coastalelitefishing.bigcartel.com/" class="btn">Shop Now</a>
     </div>
 
-    <!-- Features Section -->
-    <div class="features">
-        <div class="feature-box">
-            <h2>🔥 Precision Engineering</h2>
-            <p>Every rod is designed with high-performance materials for maximum strength.</p>
+    <!-- Products Section -->
+    <div class="products">
+        <div class="product-card">
+            <h3>Vanguard Series - Revolution</h3>
+            <p>$150</p>
+            <a href="https://coastalelitefishing.bigcartel.com/" class="btn">View Product</a>
         </div>
-        <div class="feature-box">
-            <h2>🌊 Built for Saltwater</h2>
-            <p>Our rods withstand the harshest marine environments with zero compromises.</p>
+        <div class="product-card">
+            <h3>Zenith Series - Vortex</h3>
+            <p>$235</p>
+            <a href="https://coastalelitefishing.bigcartel.com/" class="btn">View Product</a>
         </div>
-        <div class="feature-box">
-            <h2>⚡ Elite Performance</h2>
-            <p>Experience unmatched sensitivity and power with every cast.</p>
+        <div class="product-card">
+            <h3>Vanguard Series - Titan</h3>
+            <p>$150</p>
+            <a href="https://coastalelitefishing.bigcartel.com/" class="btn">View Product</a>
         </div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
         <p>© 2025 Coastal Elite Fishing | Designed for Champions</p>
-        <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
     </div>
 
 </body>
 </html>
+
+     
