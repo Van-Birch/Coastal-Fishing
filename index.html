@@ -3,197 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coastal Elite Fishing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: #ffffff;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #1F1F1F;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #F4A261;
-            margin: 0 15px;
-            font-weight: 500;
-            font-size: 1.1rem;
-        }
-
-        nav a:hover {
-            color: #E76F51;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 90vh;
-            background: url('https://via.placeholder.com/1500x800') no-repeat center center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            margin: 0;
-            color: #F4A261;
-            font-weight: 700;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            max-width: 700px;
-            margin-top: 10px;
-            color: #E9C46A;
-        }
-
-        .btn {
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-            color: white;
-            background: #E76F51;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: 0.3s;
-            font-weight: bold;
-            box-shadow: 0 0 10px rgba(231, 111, 81, 0.7);
-        }
-
-        .btn:hover {
-            background: #F4A261;
-            box-shadow: 0 0 20px rgba(244, 162, 97, 0.9);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .feature-box {
-            width: 30%;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-            transition: 0.3s;
-        }
-
-        .feature-box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-        }
-
-        .feature-box h2 {
-            color: #F4A261;
-        }
-
-        /* Products Section */
-        .products {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding: 60px 20px;
-        }
-
-        .product-card {
-            background: #1F1F1F;
-            color: white;
-            width: 250px;
-            margin: 15px;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-            transition: transform 0.3s;
-        }
-
-        .product-card:hover {
-            transform: scale(1.05);
-        }
-
-        .product-card h3 {
-            color: #F4A261;
-        }
-
-        /* Footer */
-        .footer {
-            background: #1B263B;
-            padding: 20px;
-            font-size: 1rem;
-            color: #ffffff;
-        }
-
-    </style>
+    <title>Coastal Elite Fishing | Premium Custom Fishing Rods</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">COASTAL ELITE FISHING</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="quiz.html">Custom Rod Quiz</a></li>
+                <li><a href="policy.html">Privacy & Warranty</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#" aria-label="Fishbrain"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="warranty.html">Warranty & Returns</a>
-        <a href="quiz.html">Try Our Custom Rod Quiz</a>
-    </nav>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>PRECISION CRAFTED FISHING RODS</h1>
+                <p>Experience the perfect balance of power and sensitivity</p>
+                <a href="products.html" class="cta-button">SHOP NOW</a>
+            </div>
+        </section>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>Coastal Elite Fishing</h1>
-        <p>Handcrafted rods built for serious anglers who demand the best.</p>
-        <a href="https://coastalelitefishing.bigcartel.com/" class="btn">Shop Now</a>
-    </div>
+        <section class="featured-products">
+            <h2>FEATURED PRODUCTS</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/vortex-rod.jpg" alt="ZENITH Series VORTEX 7' Premium Carbon Inshore Rod">
+                    </div>
+                    <div class="product-info">
+                        <h3>ZENITH Series VORTEX</h3>
+                        <p class="product-subtitle">7' Premium Carbon Inshore Rod</p>
+                        <p class="product-price">$235.00</p>
+                        <p class="product-description">Engineered with premium carbon fiber for exceptional sensitivity and strength. Perfect for serious inshore anglers.</p>
+                        <a href="products.html" class="shop-now-button">SHOP NOW</a>
+                    </div>
+                </div>
 
-    <!-- Products Section -->
-    <div class="products">
-        <div class="product-card">
-            <h3>Vanguard Series - Revolution</h3>
-            <p>$150</p>
-            <a href="https://coastalelitefishing.bigcartel.com/" class="btn">View Product</a>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/tempest-rod.jpg" alt="ZENITH Series TEMPEST 7'6" Inshore/Surf Rod">
+                    </div>
+                    <div class="product-info">
+                        <h3>ZENITH Series TEMPEST</h3>
+                        <p class="product-subtitle">7'6" Inshore/Surf Rod</p>
+                        <p class="product-price"><span class="original-price">$279.99</span> $249.99</p>
+                        <p class="product-description">Versatile design for both inshore and surf fishing. Extended length provides optimal casting distance with precision accuracy.</p>
+                        <a href="products.html" class="shop-now-button">SHOP NOW</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/titan-rod.jpg" alt="Vanguard Series TITAN 7'6" Inshore/Surf Rod">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vanguard Series TITAN</h3>
+                        <p class="product-subtitle">7'6" Inshore/Surf Rod</p>
+                        <p class="product-price"><span class="original-price">$229.99</span> $199.99</p>
+                        <p class="product-description">Built for durability and performance. The Vanguard Series offers professional quality at an accessible price point.</p>
+                        <a href="products.html" class="shop-now-button">SHOP NOW</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>WHAT OUR CUSTOMERS SAY</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"The ZENITH VORTEX is the most responsive rod I've ever used. Worth every penny for serious anglers."</p>
+                    <p class="testimonial-author">- Michael T., Professional Guide</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>JOIN OUR COMMUNITY</h2>
+            <p>Subscribe for exclusive offers, new product announcements, and expert fishing tips</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>COASTAL ELITE FISHING</h3>
+                <p>Premium Custom Fishing Rods</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="quiz.html">Custom Rod Quiz</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: info@coastaleliterods.com</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Fishbrain"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
         </div>
-        <div class="product-card">
-            <h3>Zenith Series - Vortex</h3>
-            <p>$235</p>
-            <a href="https://coastalelitefishing.bigcartel.com/" class="btn">View Product</a>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Coastal Elite Fishing. All Rights Reserved.</p>
+            <div class="footer-legal">
+                <a href="policy.html">Privacy & Warranty Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
         </div>
-        <div class="product-card">
-            <h3>Vanguard Series - Titan</h3>
-            <p>$150</p>
-            <a href="https://coastalelitefishing.bigcartel.com/" class="btn">View Product</a>
-        </div>
-    </div>
+    </footer>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>© 2025 Coastal Elite Fishing | Designed for Champions</p>
-    </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
-
-     
