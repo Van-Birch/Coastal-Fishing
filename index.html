@@ -20,1057 +20,6 @@
         /* Any additional inline CSS goes here */
     </style>
 </head>
-
-    /* === GLOBAL STYLES === */
-        :root {
-            --primary-color: #0c2440;
-            --secondary-color: #ffffff;
-            --accent-color: #1e88e5;
-            --accent-hover: #1565c0;
-            --text-color: #333333;
-            --dark-gray: #1a1a1a;
-            --light-gray: #f5f5f5;
-            --medium-gray: #e0e0e0;
-            --sale-color: #e53935;
-            --success-color: #43a047;
-            --border-radius: 4px;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-            background-color: var(--secondary-color);
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.8rem;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            text-align: center;
-            border: none;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-color);
-            color: var(--secondary-color);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--accent-color);
-            color: var(--accent-color);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--accent-color);
-            color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            position: relative;
-            color: var(--primary-color);
-            font-weight: 700;
-        }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: var(--accent-color);
-        }
-
-        section {
-            padding: 5rem 0;
-        }
-
-        /* === HEADER & NAVIGATION === */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: var(--primary-color);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            transition: var(--transition);
-        }
-
-        header.scrolled {
-            padding: 0.5rem 0;
-            background-color: rgba(12, 36, 64, 0.95);
-            backdrop-filter: blur(10px);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.2rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--secondary-color);
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo i {
-            margin-right: 10px;
-            font-size: 1.8rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--secondary-color);
-            font-weight: 500;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            position: relative;
-        }
-
-        .nav-links a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--accent-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover:after,
-        .nav-links a.active:after {
-            width: 100%;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1.2rem;
-        }
-
-        .social-icons a {
-            font-size: 1.2rem;
-            color: var(--secondary-color);
-        }
-
-        .social-icons a:hover {
-            color: var(--accent-color);
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 6px;
-            cursor: pointer;
-            z-index: 1001;
-        }
-
-        .hamburger span {
-            width: 30px;
-            height: 2px;
-            background-color: var(--secondary-color);
-            transition: var(--transition);
-        }
-
-        /* === HERO SECTION === */
-        .hero {
-            height: 100vh;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/800');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            margin-top: 0;
-            color: var(--secondary-color);
-        }
-
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            animation: fadeInDown 1s ease;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            font-weight: 400;
-            animation: fadeInUp 1s ease 0.3s forwards;
-            opacity: 0;
-        }
-
-        .hero .btn {
-            animation: fadeInUp 1s ease 0.6s forwards;
-            opacity: 0;
-            padding: 1rem 2.5rem;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin: 0 10px;
-        }
-
-        /* === FEATURES SECTION === */
-        .features {
-            background-color: var(--light-gray);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            background-color: var(--secondary-color);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--accent-color);
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .feature-card p {
-            font-size: 0.95rem;
-            color: #666;
-        }
-
-        /* === PRODUCTS SECTION === */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .product-card {
-            background-color: var(--secondary-color);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: var(--sale-color);
-            color: var(--secondary-color);
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        .product-image {
-            height: 250px;
-            overflow: hidden;
-        }
-
-        .product-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .product-card:hover .product-image img {
-            transform: scale(1.05);
-        }
-
-        .product-info {
-            padding: 1.5rem;
-        }
-
-        .product-info h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        .product-subtitle {
-            color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .product-price {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-            color: var(--accent-color);
-            display: flex;
-            align-items: center;
-        }
-
-        .original-price {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 1rem;
-            margin-right: 10px;
-        }
-
-        .product-description {
-            margin-bottom: 1.5rem;
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .product-actions {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .product-btn {
-            padding: 0.7rem 1.5rem;
-            font-size: 0.9rem;
-            border-radius: var(--border-radius);
-        }
-
-        /* === TESTIMONIALS SECTION === */
-        .testimonials {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-        }
-
-        .testimonials .section-title {
-            color: var(--secondary-color);
-        }
-
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .testimonial {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: var(--border-radius);
-            padding: 2.5rem;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: opacity 0.5s ease;
-        }
-
-        .testimonial p {
-            font-size: 1.1rem;
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .testimonial-nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 2rem;
-            gap: 10px;
-        }
-
-        .testimonial-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .testimonial-dot.active {
-            background-color: var(--secondary-color);
-        }
-
-        /* === CTA SECTION === */
-        .cta {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/api/placeholder/1200/600');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            text-align: center;
-            color: var(--secondary-color);
-            padding: 6rem 0;
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta p {
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto 2.5rem;
-        }
-
-        .cta .btn {
-            padding: 1rem 2.5rem;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            margin: 0 10px 10px;
-        }
-
-        /* === NEWSLETTER SECTION === */
-        .newsletter {
-            text-align: center;
-            background-color: var(--light-gray);
-        }
-
-        .newsletter-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .newsletter p {
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-            color: #666;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            padding: 1rem;
-            border: 1px solid var(--medium-gray);
-            border-radius: var(--border-radius);
-            font-size: 0.95rem;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .newsletter-form input:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-
-        .newsletter-form button {
-            background-color: var(--accent-color);
-            color: var(--secondary-color);
-            padding: 1rem 1.5rem;
-            border: none;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .newsletter-form button:hover {
-            background-color: var(--accent-hover);
-        }
-
-        /* === FOOTER === */
-        footer {
-            background-color: var(--dark-gray);
-            color: var(--secondary-color);
-            padding-top: 4rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-        }
-
-        .footer-logo h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--secondary-color);
-        }
-
-        .footer-logo p {
-            color: #aaa;
-            margin-bottom: 1.5rem;
-        }
-
-        .footer-links h4, 
-        .footer-contact h4 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary-color);
-            position: relative;
-        }
-
-        .footer-links h4:after,
-        .footer-contact h4:after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent-color);
-            bottom: -10px;
-            left: 0;
-        }
-
-        .footer-links ul {
-            display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-        }
-
-        .footer-links a {
-            color: #aaa;
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
-            padding-left: 5px;
-        }
-
-        .footer-contact p {
-            color: #aaa;
-            margin-bottom: 1rem;
-        }
-
-        .footer-contact .contact-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-contact .contact-info i {
-            margin-right: 10px;
-            color: var(--accent-color);
-        }
-
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .footer-social a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--secondary-color);
-            transition: var(--transition);
-        }
-
-        .footer-social a:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-5px);
-        }
-
-        .footer-bottom {
-            margin-top: 4rem;
-            padding: 1.5rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.9rem;
-            color: #aaa;
-        }
-
-        .footer-legal {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .footer-legal a {
-            color: #aaa;
-        }
-
-        .footer-legal a:hover {
-            color: var(--accent-color);
-        }
-
-        /* === QUIZ PAGE STYLES === */
-        .quiz-section {
-            background-color: var(--light-gray);
-            padding: 8rem 0 5rem;
-        }
-
-        .quiz-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: var(--secondary-color);
-            border-radius: var(--border-radius);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-        }
-
-        .quiz-title {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .quiz-title h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .quiz-title p {
-            color: #666;
-        }
-
-        .quiz-progress {
-            margin-bottom: 2rem;
-        }
-
-        .progress-bar {
-            height: 8px;
-            background-color: var(--medium-gray);
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .progress-fill {
-            height: 100%;
-            background-color: var(--accent-color);
-            width: 0;
-            transition: width 0.3s ease;
-        }
-
-        .question {
-            display: none;
-        }
-
-        .question.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .question h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-color);
-        }
-
-        .options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .option {
-            padding: 1rem;
-            border: 1px solid var(--medium-gray);
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .option:hover {
-            border-color: var(--accent-color);
-            background-color: rgba(30, 136, 229, 0.05);
-        }
-
-        .option.selected {
-            border-color: var(--accent-color);
-            background-color: rgba(30, 136, 229, 0.1);
-        }
-
-        .quiz-navigation {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .quiz-btn {
-            padding: 0.8rem 1.8rem;
-            font-size: 0.95rem;
-        }
-
-        .quiz-results {
-            text-align: center;
-            display: none;
-        }
-
-        .quiz-results.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .results-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .recommended-product {
-            background-color: var(--light-gray);
-            border-radius: var(--border-radius);
-            padding: 2rem;
-            margin: 2rem 0;
-        }
-
-        .recommended-product h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-        }
-
-        .product-img {
-            width: 200px;
-            margin: 0 auto 1.5rem;
-        }
-
-        /* === ANIMATIONS === */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* === NOTIFICATION === */
-        .notification {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 1rem 1.5rem;
-            border-radius: var(--border-radius);
-            color: var(--secondary-color);
-            font-weight: 500;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 1001;
-        }
-
-        .notification.success {
-            background-color: var(--success-color);
-        }
-
-        .notification.error {
-            background-color: var(--sale-color);
-        }
-
-        .notification.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
-
-        /* === RESPONSIVE DESIGN === */
-        @media (max-width: 1024px) {
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                height: 100vh;
-                background-color: var(--primary-color);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                transition: var(--transition);
-                z-index: 1000;
-                padding: 2rem;
-                gap: 2rem;
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .nav-links a {
-                font-size: 1.1rem;
-            }
-
-            .hamburger.active span:nth-child(1) {
-                transform: translateY(8px) rotate(45deg);
-            }
-
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active span:nth-child(3) {
-                transform: translateY(-8px) rotate(-45deg);
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .footer-content {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 1rem;
-                text-align: center;
-            }
-
-            .footer-legal {
-                justify-content: center;
-            }
-
-            .newsletter-form {
-                flex-direction: column;
-            }
-
-            .cta .btn {
-                display: block;
-                width: 100%;
-                margin-bottom: 1rem;
-            }
-
-            .product-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .feature-card, 
-            .product-card,
-            .testimonial {
-                padding: 1.5rem;
-            }
-
-            .quiz-container {
-                padding: 1.5rem;
-            }
-
-            .options {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* === COLOR THEMES === */
-        body.dark-theme {
-            --primary-color: #0d47a1;
-            --dark-gray: #121212;
-            --text-color: #f5f5f5;
-            background-color: #1a1a1a;
-        }
-
-        body.light-theme {
-            --primary-color: #1976d2;
-            --accent-color: #2196f3;
-            --accent-hover: #1565c0;
-        }
-
-        body.green-theme {
-            --primary-color: #2e7d32;
-            --accent-color: #43a047;
-            --accent-hover: #2e7d32;
-        }
-
-        /* === ADDITIONAL ELEMENTS === */
-        .theme-switcher {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            z-index: 999;
-            color: var(--secondary-color);
-            transition: var(--transition);
-        }
-
-        .theme-switcher:hover {
-            transform: rotate(30deg);
-        }
-
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-            z-index: 999;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-5px);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 12px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--light-gray);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--accent-color);
-            border-radius: 6px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-hover);
-        }
-    </style>
-</head>
 <body>
     <!-- Theme Switcher -->
     <div class="theme-switcher" id="themeSwitcher">
@@ -1093,5 +42,465 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#products">Products</a></li>
+                    <li><a href="#quiz">Custom Rod Quiz</a></li>
+                    <li><a href="#warranty">Warranty</a></li>
                     <li><a href="#about">About Us</a></li>
-                    <li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Premium Custom Fishing Rods</h1>
+            <p>Handcrafted for performance and precision. Experience fishing like never before with our custom-built rods designed for the serious angler.</p>
+            <div>
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <a href="#quiz" class="btn btn-outline">Find Your Perfect Rod</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Rods</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>Premium Materials</h3>
+                    <p>We use only the highest quality components and materials in crafting our custom fishing rods.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Expert Craftsmanship</h3>
+                    <p>Each rod is meticulously handcrafted by our team of experienced rod builders with decades of expertise.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ruler"></i>
+                    </div>
+                    <h3>Custom Designed</h3>
+                    <p>Personalize your rod with custom colors, components, and specifications tailored to your fishing style.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Lifetime Warranty</h3>
+                    <p>We stand behind our quality with a comprehensive lifetime warranty against manufacturing defects.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Premium Rods</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <span class="product-badge">Best Seller</span>
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/250" alt="Coastal Elite Pro Series">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pro Series Offshore</h3>
+                        <p class="product-subtitle">Heavy-duty Saltwater Rod</p>
+                        <div class="product-price">
+                            <span class="original-price">$699</span>
+                            $599
+                        </div>
+                        <p class="product-description">Built for serious offshore anglers targeting large game fish. Features premium carbon fiber blank with titanium guides.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+                            <a href="#" class="btn btn-outline product-btn">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/250" alt="Coastal Elite Inshore Special">
+                    </div>
+                    <div class="product-info">
+                        <h3>Inshore Special</h3>
+                        <p class="product-subtitle">Medium-Light Action</p>
+                        <div class="product-price">$449</div>
+                        <p class="product-description">Perfectly balanced for inshore fishing scenarios. Sensitive tip with backbone for fighting redfish, snook, and trout.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+                            <a href="#" class="btn btn-outline product-btn">Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="product-badge">New</span>
+                    <div class="product-image">
+                        <img src="/api/placeholder/400/250" alt="Coastal Elite Fly Fishing Rod">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fly Series Elite</h3>
+                        <p class="product-subtitle">Ultra-Light Action</p>
+                        <div class="product-price">$529</div>
+                        <p class="product-description">Premium fly fishing rod with precision casting and ultra-light feel. Available in multiple weights for all scenarios.</p>
+                        <div class="product-actions">
+                            <a href="#" class="btn btn-primary product-btn">Add to Cart</a>
+                            <a href="#" class="btn btn-outline product-btn">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" style="margin-top: 3rem; text-align: center;">
+                <a href="#" class="btn btn-outline">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Rod Quiz Section -->
+    <section class="quiz-section" id="quiz">
+        <div class="container">
+            <h2 class="section-title">Find Your Perfect Rod</h2>
+            <div class="quiz-container">
+                <div class="quiz-title">
+                    <h2>Custom Rod Finder Quiz</h2>
+                    <p>Answer a few questions to discover your ideal custom fishing rod</p>
+                </div>
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill" style="width: 20%;"></div>
+                    </div>
+                </div>
+                <div class="question active" id="question1">
+                    <h3>1. What type of fishing do you primarily do?</h3>
+                    <div class="options">
+                        <div class="option">Freshwater Lakes</div>
+                        <div class="option">Inshore Saltwater</div>
+                        <div class="option">Offshore Deep Sea</div>
+                        <div class="option">Fly Fishing</div>
+                    </div>
+                    <div class="quiz-navigation">
+                        <button class="btn btn-outline quiz-btn" disabled>Previous</button>
+                        <button class="btn btn-primary quiz-btn">Next</button>
+                    </div>
+                </div>
+                <!-- More questions would be added here -->
+                <div class="quiz-results">
+                    <h3 class="results-title">Your Perfect Rod Match</h3>
+                    <div class="recommended-product">
+                        <div class="product-img">
+                            <img src="/api/placeholder/300/200" alt="Recommended Rod">
+                        </div>
+                        <h3>Coastal Elite Pro Series</h3>
+                        <p>Based on your preferences, we recommend our Pro Series with these specifications:</p>
+                        <ul>
+                            <li>Length: 7'6"</li>
+                            <li>Power: Medium-Heavy</li>
+                            <li>Action: Fast</li>
+                            <li>Handle: Premium Cork</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary" style="margin-top: 1.5rem;">Customize This Rod</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Warranty Section -->
+    <section class="warranty" id="warranty">
+        <div class="container">
+            <h2 class="section-title">Our Warranty Promise</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">We stand behind every rod we craft with our industry-leading warranty coverage. Every Coastal Elite rod comes with our Lifetime Craftsmanship Guarantee.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Lifetime Craftsmanship</h3>
+                        <p>All manufacturing defects are covered for the lifetime of the original owner.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>Easy Repairs</h3>
+                        <p>Quick turnaround on all warranty repairs with minimal hassle.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-percent"></i>
+                        </div>
+                        <h3>Discounted Replacements</h3>
+                        <p>Special replacement pricing for accidental damage outside warranty coverage.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary" style="margin-top: 2rem;">View Full Warranty Details</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"I've been fishing for over 30 years and the Coastal Elite Pro Series is by far the best rod I've ever owned. The sensitivity and power are perfectly balanced, and the build quality is second to none."</p>
+                    <div class="testimonial-author">- Michael R., Professional Angler</div>
+                </div>
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active"></div>
+                    <div class="testimonial-dot"></div>
+                    <div class="testimonial-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Coastal Elite Fishing</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="margin-bottom: 2rem; font-size: 1.1rem;">Founded in 2005 by master rod builder James Coastal, our company has grown from a small workshop to a premier custom rod building company with a reputation for excellence and innovation.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <h3>Our Story</h3>
+                        <p>From humble beginnings to industry leaders, learn about our journey and passion for fishing.</p>
+                        <a href="#" style="color: var(--accent-color); display: inline-block; margin-top: 1rem;">Read More</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Our Team</h3>
+                        <p>Meet our experienced team of rod builders, designers, and fishing enthusiasts.</p>
+                        <a href="#" style="color: var(--accent-color); display: inline-block; margin-top: 1rem;">Meet the Team</a>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Our Process</h3>
+                        <p>See how we craft each rod with precision, care, and attention to detail.</p>
+                        <a href="#" style="color: var(--accent-color); display: inline-block; margin-top: 1rem;">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; max-width: 1000px; margin: 0 auto;">
+                <div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--primary-color);">Get In Touch</h3>
+                    <div style="margin-bottom: 1.5rem;">
+                        <p><i class="fas fa-map-marker-alt" style="color: var(--accent-color); margin-right: 10px;"></i> 123 Coastal Highway, Seaside, FL 32459</p>
+                        <p><i class="fas fa-phone" style="color: var(--accent-color); margin-right: 10px;"></i> (555) 123-4567</p>
+                        <p><i class="fas fa-envelope" style="color: var(--accent-color); margin-right: 10px;"></i> info@coastalelitefishing.com</p>
+                    </div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--primary-color);">Store Hours</h3>
+                    <p>Monday - Friday: 9AM - 6PM</p>
+                    <p>Saturday: 9AM - 4PM</p>
+                    <p>Sunday: Closed</p>
+                    <div style="margin-top: 2rem;">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--primary-color);">Follow Us</h3>
+                        <div style="display: flex; gap: 1rem;">
+                            <a href="#" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fab fa-youtube"></i></a>
+                            <a href="#" style="font-size: 1.5rem; color: var(--accent-color);"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; color: var(--primary-color);">Send Us a Message</h3>
+                    <form>
+                        <div style="margin-bottom: 1rem;">
+                            <input type="text" placeholder="Your Name" style="width: 100%; padding: 0.8rem; border: 1px solid var(--medium-gray); border-radius: var(--border-radius);">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <input type="email" placeholder="Your Email" style="width: 100%; padding: 0.8rem; border: 1px solid var(--medium-gray); border-radius: var(--border-radius);">
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <input type="text" placeholder="Subject" style="width: 100%; padding: 0.8rem; border: 1px solid var(--medium-gray); border-radius: var(--border-radius);">
+                        </div>
+                        <div style="margin-bottom: 1.5rem;">
+                            <textarea placeholder="Your Message" rows="5" style="width: 100%; padding: 0.8rem; border: 1px solid var(--medium-gray); border-radius: var(--border-radius);"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2 class="section-title">Subscribe to Our Newsletter</h2>
+            <div class="newsletter-content">
+                <p>Stay updated with our latest product releases, fishing tips, and exclusive offers.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Elevate Your Fishing Experience?</h2>
+            <p>Our custom rods are crafted to enhance your performance on the water. Experience the difference that quality makes.</p>
+            <div>
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+                <a href="#contact" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-fish"></i> Coastal Elite Fishing</h3>
+                    <p>Hand-crafted premium fishing rods for the discerning angler. Quality, performance, and precision in every cast.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#quiz">Rod Finder Quiz</a></li>
+                        <li><a href="#warranty">Warranty</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Rod Care Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>123 Coastal Highway, Seaside, FL 32459</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <p>(555) 123-4567</p>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@coastalelitefishing.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Coastal Elite Fishing. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div class="notification" id="notification"></div>
+
+    <!-- JavaScript -->
+    <script>
+        // JavaScript could be added here or linked from external file
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Menu Toggle
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+            
+            // Scroll Header Effect
+            const header = document.getElementById('header');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+            
+            // Back to Top Button
+            const backToTop = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 500) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+            
+            backToTop.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Theme Switcher
+            const themeSwitcher = document.getElementById('themeSwitcher');
+            const themes = ['light-theme', 'dark-theme', 'green-theme'];
+            let currentTheme = 0;
+            
+            themeSwitcher.addEventListener('click', function() {
+                document.body.classList.remove(themes[currentTheme]);
+                currentTheme = (currentTheme + 1) % themes.length;
+                document.body.classList.add(themes[currentTheme]);
+            });
+        });
+    </script>
+</body>
+</html>
